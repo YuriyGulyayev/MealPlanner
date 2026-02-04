@@ -71,6 +71,7 @@ Meal 2, Big Meal:
    If Protein is not Mackerel or Herring (which themselves contain fat): Include Pork Fat (40 grams).
 
    If Protein is Beef or Pork: Include Bean (60 grams dry).
+      Issue. Note that currently no bean rotation is implemented. Rotate them manually when possible.
 
    Else (Liver, Seafood, or other Meats): Include the next item from the Big Meal Grain Rotation (75 grams dry).
 

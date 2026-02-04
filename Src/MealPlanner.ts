@@ -48,7 +48,10 @@ export class MealPlanner {
    private readonly _oat = new Ingredient("Oat", IngredientFlags.IsGrain, 1770);
    private readonly _whiteRice = new Ingredient("White Rice", IngredientFlags.IsGrain, 120);
 
-   /** Magnesium content is average for dry beans. */
+   /**
+   Magnesium content is average for dry beans.
+   Issue. Although Chickpeas contain less Magnesium, so this number might need an adjustment.
+   */
    private readonly _bean = new Ingredient("Bean", IngredientFlags.IsBean, 1700);
 
    private readonly _sunflowerSeed = new Ingredient("Sunflower Seed", IngredientFlags.None, 3250);
