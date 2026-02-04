@@ -1,0 +1,273 @@
+{
+   "lock": {
+      "frozen": true,
+   },
+   // "exclude": [],
+   "imports": {
+      "@std/cli": "jsr:@std/cli@~1.0.26",
+   },
+   "lint": {
+      // "include": ["./Src",],
+      // "exclude": [],
+      "rules": {
+         "tags": [
+            "recommended",
+            "workspace",
+            "jsr",
+            "jsx",
+            "react",
+            "fresh"
+         ],
+         "include": [
+            // "ban-untagged-todo",
+            "camelcase",
+            "default-param-last",
+            // "eqeqeq",
+            // "explicit-function-return-type",
+            // "explicit-module-boundary-types",
+            "guard-for-in",
+            "no-await-in-loop",
+            // "no-boolean-literal-for-arguments",
+            // "no-console",
+            "no-const-assign",
+            "no-eval",
+            "no-external-import",
+            "no-implicit-declare-namespace-export",
+            "no-inferrable-types",
+            "no-non-null-asserted-optional-chain",
+            // "no-non-null-assertion",
+            "no-self-compare",
+            "no-sparse-arrays",
+            "no-sync-fn-in-async-fn",
+            "no-throw-literal",
+            // "no-top-level-await",
+            "no-undef",
+            "no-useless-rename",
+            "prefer-ascii",
+            // "prefer-primordials",
+            "single-var-declarator",
+            "triple-slash-reference",
+         ],
+         // "exclude": [],
+      },
+   },
+
+   // These parameters are documented at https://docs.deno.com/runtime/reference/ts_config_migration/ and
+   // https://www.typescriptlang.org/tsconfig/ .
+   "compilerOptions": {
+      // *** Type Checking
+
+      // // [Comment-202511062]
+      // // In TSC, this is `undefined` by default, which only generates a lint.
+      // // In Deno, this is `false` by default.
+      // // [/Comment-202511062]
+      // "allowUnreachableCode": ,
+
+      // // Comment-202511062 applies.
+      // "allowUnusedLabels": ,
+
+      // "alwaysStrict": ,
+      "exactOptionalPropertyTypes": true,
+      "noFallthroughCasesInSwitch": true,
+      // "noImplicitAny": ,
+
+      // Comment-202511065 applies.
+      "noImplicitOverride": true,
+
+      "noImplicitReturns": true,
+      // "noImplicitThis": ,
+      "noPropertyAccessFromIndexSignature": true,
+      "noUncheckedIndexedAccess": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+
+      // Comment-202511065 applies.
+      "strict": true,
+
+      // "strictBindCallApply": ,
+      // "strictBuiltinIteratorReturn": ,
+      // "strictFunctionTypes": ,
+      // "strictNullChecks": ,
+      // "strictPropertyInitialization": ,
+      // "useUnknownInCatchVariables": ,
+
+      // *** Modules
+
+      // "allowArbitraryExtensions": ,
+      // "allowImportingTsExtensions": ,
+      // "allowUmdGlobalAccess": ,
+      // "baseUrl": ,
+      // "customConditions": ,
+
+      // // [Comment-202511063]
+      // // Deno alows only a limited number of possible values. Assuming it will provide a good one by default.
+      // // [/Comment-202511063]
+      // "module": "es2022",
+
+      // "moduleResolution": ,
+      // "moduleSuffixes": ,
+      // "noResolve": ,
+
+      // Comment-202511232 applies.
+      "noUncheckedSideEffectImports": true,
+
+      // "paths": ,
+
+      // // Issue. It appears that Deno supports this feature differently than TSC does.
+      // // See relevant Deno docs at https://docs.deno.com/examples/importing_json/ .
+      // // So let's not change this.
+      // // But the config file at https://www.npmjs.com/package/@tsconfig/deno configures this to be `true`.
+      // "resolveJsonModule": true,
+
+      // "resolvePackageJsonExports": ,
+      // "resolvePackageJsonImports": ,
+      // "rewriteRelativeImportExtensions": ,
+      // "rootDir": ,
+      // "rootDirs": ,
+      // "typeRoots": ,
+      // "types": ,
+
+      // *** Emit
+
+      // "declaration": ,
+      // "declarationDir": ,
+      // "declarationMap": ,
+      // "downlevelIteration": ,
+      // "emitBOM": ,
+      // "emitDeclarationOnly": ,
+      // "importHelpers": ,
+      // "inlineSourceMap": ,
+      // "inlineSources": ,
+      // "mapRoot": ,
+      // "newLine": ,
+      // "noEmit": ,
+      // "noEmitHelpers": ,
+      // "noEmitOnError": ,
+      // "outDir": ,
+      // "outFile": ,
+      // "preserveConstEnums": ,
+
+      // [Comment-202511232]
+      // Issue. The `deno.jsonc` file schema is not aware of this property.
+      // [/Comment-202511232]
+      "removeComments": true,
+
+      // "sourceMap": ,
+      // "sourceRoot": ,
+      // "stripInternal": ,
+
+      // *** JavaScript Support
+
+      // [Comment-202511065]
+      // In TSC, this is `false` by default.
+      // In Deno, this is `true` by default.
+      // [/Comment-202511065]
+      // See also: "checkJs".
+      "allowJs": true,
+
+      // See also: "allowJs".
+      "checkJs": true,
+
+      // "maxNodeModuleJsDepth": ,
+
+      // *** Editor Support
+
+      // "disableSizeLimit": ,
+      // "plugins": ,
+
+      // *** Interop Constraints
+
+      // "allowSyntheticDefaultImports": ,
+      // "erasableSyntaxOnly": ,
+      // "esModuleInterop": ,
+      // "forceConsistentCasingInFileNames": ,
+      // "isolatedDeclarations": ,
+
+      // // By default, this equals `verbatimModuleSyntax`.
+      // "isolatedModules": ,
+
+      // "preserveSymlinks": ,
+
+      // See also: `isolatedModules`.
+      "verbatimModuleSyntax": true,
+
+      // *** Backwards Compatibility
+
+      // "charset": ,
+      // "importsNotUsedAsValues": ,
+      // "keyofStringsOnly": ,
+
+      // // Comment-202511065 applies.
+      // // This parameter is deprecated.
+      // "noImplicitUseStrict": ,
+
+      // "noStrictGenericChecks": ,
+      // "out": ,
+      // "preserveValueImports": ,
+      // "suppressExcessPropertyErrors": ,
+      // "suppressImplicitAnyIndexErrors": ,
+
+      // *** Language and Environment
+
+      // "emitDecoratorMetadata": ,
+      // "experimentalDecorators": ,
+      // "jsx": ,
+      // "jsxFactory": ,
+      // "jsxFragmentFactory": ,
+      // "jsxImportSource": ,
+      // "lib": ,
+      // "libReplacement": ,
+      // "moduleDetection": ,
+      // "noLib": ,
+      // "reactNamespace": ,
+
+      // // Comment-202511063 relates and/or applies.
+      // "target": "es2024",
+
+      // "useDefineForClassFields": ,
+
+      // *** Compiler Diagnostics
+
+      // "diagnostics": ,
+      // "explainFiles": ,
+      // "extendedDiagnostics": ,
+      // "generateCpuProfile": ,
+      // "generateTrace": ,
+      // "listEmittedFiles": ,
+      // "listFiles": ,
+      // "noCheck": ,
+      // "traceResolution": ,
+
+      // *** Projects
+
+      // "composite": ,
+      // "disableReferencedProjectLoad": ,
+      // "disableSolutionSearching": ,
+      // "disableSourceOfProjectReferenceRedirect": ,
+      // "incremental": ,
+      // "tsBuildInfoFile": ,
+
+      // *** Output Formatting
+
+      // "noErrorTruncation": ,
+      // "preserveWatchOutput": ,
+      // "pretty": ,
+
+      // *** Completeness
+
+      // "skipDefaultLibCheck": ,
+      // "skipLibCheck": ,
+
+      // *** Command Line
+      // (There are no parameters in this category.)
+
+      // *** Watch Options
+
+      // "assumeChangesOnlyAffectDirectDependencies": ,
+   },
+
+   // "permissions": {},
+   // "tasks": {
+   //    "start": "deno run Src/Main.ts",
+   // },
+}

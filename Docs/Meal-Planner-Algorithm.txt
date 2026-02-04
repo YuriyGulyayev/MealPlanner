@@ -1,0 +1,188 @@
+Liver Rotation: Beef Liver (100 grams); Chicken Liver (100 grams).
+
+Seafood Rotation: Mackerel (100 grams); Oyster (75 grams); Herring (100 grams); Sardine (80 grams).
+
+Meat Rotation: Pork (120 grams); Turkey (120 grams); Beef (120 grams); Chicken (120 grams).
+
+Primary Protein Rotation: starting with the very first day and every 6th day (after a gap of 5 days),
+pick the next item from Liver Rotation;
+on other days alternate Seafood and Meat by picking the next item from their respective rotations.
+
+Both Big and Medium Meals can include a grain, but not all of those meals include one.
+Use the Stride Scheduling algorithm to pick a grain for a meal, but consider only those grains
+that meet the Min Gap requirement (explained below).
+Big Meal Grain Rotation includes the following grains and their priorities:
+   Buckwheat: 42.4
+   Millet: 23.6
+   Barley: 14.5
+   Wheat: 9.5
+   Oat: 5.0
+   White Rice: 5.0
+Medium Meal Grain Rotation includes the following grains and their priorities:
+   Oat: 1.0
+   Millet: 1.0
+   White Rice: 1.0
+
+Every potential grain-carrying meal (Big and Medium) is considered a "Slot",
+regardless of whether a grain is included in the meal.
+Min Number of Slots (a.k.a. Gap) between picks of the same grain is configured for each grain.
+In case a grain min gap is G, if the grain was picked in slot S, it's allowed to be picked again no earlier than in slot S + G + 1.
+If no grain exists that meets the Min Gap requirement: declare a failure (throw an error).
+In that case, the user will have to tweak parameters.
+It's important to choose a Min Gap that does not result in the given grain being picked less often than its priority mandates.
+Min Gaps:
+   Buckwheat: 3
+   Millet: 3
+   Barley: 4
+   Wheat: 5
+   Oat: 4
+   White Rice: 4
+
+Vegetable Rotation: Beet Root; Red Bell Pepper; Carrot Root; Cabbage or Sauerkraut.
+
+Potato Rotation: Potato (Regular, White); Sweet Potato.
+
+Green Herb Rotation: Dill (35 g); Parsley (45 g); Green Onion (Scallion) (60 g).
+
+Farmer's Cheese and Porridge Rotation: Farmer's Cheese; Grain Porridge with Milk; Farmer's Cheese (2nd time).
+
+Fruit Pulp Rotation: Apple (150 g); Orange Pulp (90 g); Banana Pulp (90 g).
+
+Meal 1, Coffee Meal:
+{
+   Include Coffee (2 grams).
+  
+   Include Water.
+
+   Include Milk (15 grams).
+}
+
+Meal 2, Big Meal:
+{
+   Pre-Meal:
+   {
+      Include Apple Cider Vinegar (10 grams).
+
+      Include Water (limited).
+   }
+
+   Include the next item from Primary Protein Rotation.
+
+   If Protein is not Mackerel or Herring (which themselves contain fat): Include Pork Fat (40 grams).
+
+   If Protein is Beef or Pork: Include Bean (60 grams dry).
+
+   Else (Liver, Seafood, or other Meats): Include the next item from the Big Meal Grain Rotation (75 grams dry).
+
+   Include the next item from Vegetable Rotation (75 grams).
+
+   Include Onion (40 grams).
+
+   Include Garlic (15 grams).
+
+   Include Ginger Root (25 grams).
+
+   Include Orange Peel (25 grams).
+   Note that at this point about 2/3 of the whole peel is available, which is reflected in the weight estimate.
+
+   Include Lemon Peel (10 grams).
+   Note that at this point about 1/3 of the whole peel is available, which is reflected in the weight estimate.
+
+   Include Banana Peel (20 grams).
+   Note that at this point about 2/3 of the whole peel is available, which is reflected in the weight estimate.
+
+   Include Black Peppercorn (1 gram).
+
+   Include Salt (1 gram).
+
+   Include Water (limited).
+}
+
+Meal 3, Fruit Meal 1:
+{
+   Include the next item from Fruit Pulp Rotation.
+
+   Include Lemon Pulp (2 slices, 20 grams).
+
+   Include Sunflower Seed (15 grams).
+
+   Include Pepita (15 grams).
+
+   Include Water (if needed).
+}
+
+Meal 4, Medium Meal:
+{
+   If Big Meal Protein was Seafood:
+   {
+      Include 2 Eggs (45 grams per egg * 2 = 90 grams).
+
+      Note: Do not include Fat. See relevant Eggs notes in the Foods Master List.
+
+      Include the next item from Potato Rotation (100 g).
+
+      Include Green Bell Pepper (75 grams).
+
+      Include Mushroom (8/3 oz).
+
+      Include Salt (1 gram).
+
+      Include Water (limited).
+   }
+
+   Else (Meat or Liver):
+   {
+      Pick the next item from Farmer's Cheese and Porridge Rotation.
+
+      If Farmer's Cheese was picked:
+      {
+         Include Farmer's Cheese (a half a pound).
+
+         Include Sour Cream (possibly optional, for now, use zero grams in calculations).
+         See Farmer's Cheese notes in the Foods Master List for more info.
+
+         Include the next item from Green Herb Rotation.
+      }
+
+      Else (Porridge):
+      {
+         Include the next item from Medium Meal Grain Rotation (75 grams dry).
+
+         Include Milk (250 grams).
+
+         Include Butter (40 grams).
+
+         Include Cocoa Powder (15 grams).
+
+         Include Salt (1 gram).
+      }
+   }
+}
+
+Meal 5, Tea Meal:
+{
+   Include Green Tea Leaves (3 grams dry).
+
+   Include Water.
+
+   Note: Do not include Milk.
+
+   Possibly include Magnesium Glycinate (200 mg of elemental Magnesium).
+   Whether to include it, depends on the Magnesium intake target over the whole history
+   through the end of the current day and whether taking the supplement would bring the actual Magnesium intake
+   closer to the target.
+}
+
+Meal 6, Fruit Meal 2:
+{
+   Include the next item from Fruit Pulp Rotation.
+
+   If Medium Meal included Grain Porridge With Milk: Include Kefir (100 grams).
+
+   Else
+   {
+      Include Milk or Kefir (200 grams).
+
+      Include Cocoa Powder (10 grams).
+   }
+}
