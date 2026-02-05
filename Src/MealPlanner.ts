@@ -136,9 +136,12 @@ export class MealPlanner {
    private static readonly _dateFormatOptions: Intl.DateTimeFormatOptions =
       {
          weekday: "short",
+         // year: "numeric",
+         // month: "2-digit",
+         // day: "2-digit",
+         day: "numeric",
+         month: "short",
          year: "numeric",
-         month: "2-digit",
-         day: "2-digit",
       };
 
    // #endregion
@@ -255,7 +258,7 @@ export class MealPlanner {
       // #region
 
       {
-         const currentDateAsString_ = this._currentDate.toLocaleDateString("en-CA", MealPlanner._dateFormatOptions);
+         const currentDateAsString_ = this._currentDate.toLocaleDateString(/*"en-CA"*/ "en-US", MealPlanner._dateFormatOptions);
          console.info(`Day ${this._dayCounter + 1}: ${currentDateAsString_}`);
       }
 
