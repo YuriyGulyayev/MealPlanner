@@ -24,7 +24,7 @@ export class GrainRotatorSharedState {
       if( ! (ingredientNumberOfSlotsBetweenPicksMinLimit_ >= 0) ) {
          throw new Error(`GrainRotatorSharedState: No Number-Of-Slots-Between-Picks-Min-Limit registered for ${ingredient_}.`);
       }
-      return ingredientNumberOfSlotsBetweenPicksMinLimit_!;
+      return ( ingredientNumberOfSlotsBetweenPicksMinLimit_ ! );
    }
 
    public recordIngredientPick(ingredient_: Ingredient, slotCounter_: number) {

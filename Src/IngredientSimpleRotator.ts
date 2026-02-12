@@ -12,7 +12,7 @@ export class IngredientSimpleRotator implements IngredientRotator {
    }
 
    public execute() {
-      const item_ = this._items[this._nextItemIndex]!;
+      const item_ = ( this._items[this._nextItemIndex] ! );
       this._nextItemIndex = (this._nextItemIndex + 1) % this._items.length;
       return item_;
    }
