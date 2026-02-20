@@ -84,13 +84,13 @@ Meal 2, Big Meal:
    Include Ginger Root (25 grams).
 
    Include Orange Peel (25 grams).
-   Note that at this point about 2/3 of the whole peel is available, which is reflected in the weight estimate.
+   Note that at this point about 2/3 of the whole peel is available on average, which is reflected in the weight estimate.
 
    Include Lemon Peel (10 grams).
-   Note that at this point about 1/3 of the whole peel is available, which is reflected in the weight estimate.
+   Note that at this point about 1/3 of the whole peel is available on average, which is reflected in the weight estimate.
 
    Include Banana Peel (20 grams).
-   Note that at this point about 2/3 of the whole peel is available, which is reflected in the weight estimate.
+   Note that at this point about 2/3 of the whole peel is available on average, which is reflected in the weight estimate.
 
    Include Black Peppercorn (1 gram).
 
