@@ -482,7 +482,9 @@ export class MealPlanner {
          if(hadGrainPorridgeWithMilk_) {
             const kefirWeightInGrams_ = 100;
             this._addMagnesiumIntakeWeight(this._kefir, kefirWeightInGrams_);
-            fruitMeal2OutputPart1_ = `${this._kefir} (${kefirWeightInGrams_}g)`;
+            fruitMeal2OutputPart1_ =
+               `${this._kefir} (${kefirWeightInGrams_}g), ` +
+               `(skip ${this._cocoaPowder})`;
          }
          else {
             const milkOrKefirWeightInGrams_ = 200;
