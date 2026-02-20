@@ -99,10 +99,9 @@
       // "baseUrl": ,
       // "customConditions": ,
 
-      // // [Comment-202511063]
+      // // "nodenext" supports features introduced after "node20", while between those nothing like "node24" exists.
       // // Deno alows only a limited number of possible values. Assuming it will provide a good one by default.
-      // // [/Comment-202511063]
-      // "module": "es2022",
+      // "module": "nodenext",
 
       // "moduleResolution": ,
       // "moduleSuffixes": ,
@@ -221,7 +220,7 @@
       // "noLib": ,
       // "reactNamespace": ,
 
-      // // Comment-202511063 relates and/or applies.
+      // // Comment-202511232 applies.
       // "target": "es2024",
 
       // "useDefineForClassFields": ,
