@@ -51,7 +51,9 @@ Fruit Pulp Rotation: Apple (150 g); Orange Pulp (90 g); Banana Pulp (90 g).
 Meal 1, Coffee Meal:
 {
    Include Coffee (2 grams).
-  
+
+   Include Salt (0.1 to 0.2 grams).
+
    Include Water.
 
    Include Milk (15 grams).
@@ -109,6 +111,8 @@ Meal 3, Fruit Meal 1:
 
    Include Pepita (15 grams).
 
+   Include Salt (optional).
+
    Include Water (if needed).
 }
 
@@ -125,8 +129,6 @@ Meal 4, Medium Meal:
       Include Green Bell Pepper (75 grams).
 
       Include Mushroom (8/3 oz).
-
-      Include Salt (1 gram).
 
       Include Water (limited).
    }
@@ -154,15 +156,17 @@ Meal 4, Medium Meal:
          Include Butter (40 grams).
 
          Include Cocoa Powder (15 grams).
-
-         Include Salt (1 gram).
       }
    }
+
+   Include Salt (1 gram).
 }
 
 Meal 5, Tea Meal:
 {
    Include Green Tea Leaves (3 grams dry).
+
+   Note: Do not include Salt.
 
    Include Water.
 
@@ -186,4 +190,6 @@ Meal 6, Fruit Meal 2:
 
       Include Cocoa Powder (10 grams).
    }
+
+   Include Salt (optional).
 }

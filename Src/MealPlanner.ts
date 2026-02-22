@@ -275,12 +275,15 @@ export class MealPlanner {
 
       {
          const coffeeWeightInGrams_ = 2;
+         const saltWeightInGrams_ = 0.15;
          const milkWeightInGrams_ = 15;
          this._addMagnesiumIntakeWeight(this._coffee, coffeeWeightInGrams_);
+         this._addMagnesiumIntakeWeight(this._salt, saltWeightInGrams_);
          this._addMagnesiumIntakeWeight(this._milk, milkWeightInGrams_);
          console.info(
             "Coffee Meal: " +
             `${this._coffee} (${coffeeWeightInGrams_}g), ` +
+            `${this._salt} (${saltWeightInGrams_}g), ` +
             `${this._water}, ` +
             `${this._milk} (${milkWeightInGrams_}g)`
          );
@@ -377,6 +380,7 @@ export class MealPlanner {
             `${this._lemonPulp} (${lemonPulpWeightInGrams_}g), ` +
             `${this._sunflowerSeed} (${sunflowerSeedWeightInGrams_}g), ` +
             `${this._pepita} (${pepitaWeightInGrams_}g), ` +
+            `${this._salt} (optional), ` +
             `${this._water} (if needed)`
          );
       }
@@ -388,6 +392,7 @@ export class MealPlanner {
          // #region
 
          let mediumMealOutputPart1_: string;
+         let mediumMealOutputPart2_: string;
 
          // #endregion
          // #region
@@ -399,19 +404,17 @@ export class MealPlanner {
             const pickedPotato_ = this._potatoRotator.execute();
             const greenBellPepperWeightInGrams_ = 75;
             const mushroomWeightInGrams_ = 76;
-            const saltWeightInGrams_ = 1;
             this._addMagnesiumIntakeWeight(this._egg, eggWeightInGrams_);
             this._addMagnesiumIntakeWeight(pickedPotato_.ingredient, pickedPotato_.ingredientWeightInGrams);
             this._addMagnesiumIntakeWeight(this._greenBellPepper, greenBellPepperWeightInGrams_);
             this._addMagnesiumIntakeWeight(this._mushroom, mushroomWeightInGrams_);
-            this._addMagnesiumIntakeWeight(this._salt, saltWeightInGrams_);
             mediumMealOutputPart1_ =
                `${this._egg} (${eggWeightInGrams_}g), ` +
                `${pickedPotato_.ingredient} (${pickedPotato_.ingredientWeightInGrams}g), ` +
                `${this._greenBellPepper} (${greenBellPepperWeightInGrams_}g), ` +
                `${this._mushroom} (${mushroomWeightInGrams_}g), `+
-               `${this._salt} (${saltWeightInGrams_}g), ` +
-               `${this._water} (limited)`;
+               `${this._water} (limited), `;
+            mediumMealOutputPart2_ = "";
 
             // #endregion
          }
@@ -431,9 +434,9 @@ export class MealPlanner {
 
                const pickedGreenHerb_ = this._greenHerbRotator.execute();
                this._addMagnesiumIntakeWeight(pickedGreenHerb_.ingredient, pickedGreenHerb_.ingredientWeightInGrams);
-               mediumMealOutputPart1_ +=
+               mediumMealOutputPart2_ =
                   `${this._sourCream} (possibly optional, 0g), ` +
-                  `${pickedGreenHerb_.ingredient} (${pickedGreenHerb_.ingredientWeightInGrams}g)`;
+                  `${pickedGreenHerb_.ingredient} (${pickedGreenHerb_.ingredientWeightInGrams}g), `;
 
                // #endregion
             }
@@ -443,16 +446,13 @@ export class MealPlanner {
                const milkWeightInGrams_ = 250;
                const butterWeightInGrams_ = 40;
                const cocoaPowderWeightInGrams_ = 15;
-               const saltWeightInGrams_ = 1;
                this._addMagnesiumIntakeWeight(this._milk, milkWeightInGrams_);
                this._addMagnesiumIntakeWeight(this._butter, butterWeightInGrams_);
                this._addMagnesiumIntakeWeight(this._cocoaPowder, cocoaPowderWeightInGrams_);
-               this._addMagnesiumIntakeWeight(this._salt, saltWeightInGrams_);
-               mediumMealOutputPart1_ +=
+               mediumMealOutputPart2_ =
                   `${this._milk} (${milkWeightInGrams_}g), ` +
                   `${this._butter} (${butterWeightInGrams_}g), ` +
-                  `${this._cocoaPowder} (${cocoaPowderWeightInGrams_}g), ` +
-                  `${this._salt} (${saltWeightInGrams_}g)`;
+                  `${this._cocoaPowder} (${cocoaPowderWeightInGrams_}g), `;
                hadGrainPorridgeWithMilk_ = true;
 
                // #endregion
@@ -464,8 +464,15 @@ export class MealPlanner {
          // #endregion
          // #region
 
-         console.info("Medium Meal: " + mediumMealOutputPart1_);
-         
+         const saltWeightInGrams_ = 1;
+         this._addMagnesiumIntakeWeight(this._salt, saltWeightInGrams_);
+         console.info(
+            "Medium Meal: " +
+            mediumMealOutputPart1_ +
+            mediumMealOutputPart2_ +
+            `${this._salt} (${saltWeightInGrams_}g)`
+         );
+
          // #endregion
       }
 
@@ -484,7 +491,7 @@ export class MealPlanner {
             this._addMagnesiumIntakeWeight(this._kefir, kefirWeightInGrams_);
             fruitMeal2OutputPart1_ =
                `${this._kefir} (${kefirWeightInGrams_}g), ` +
-               `(skip ${this._cocoaPowder})`;
+               `(skip ${this._cocoaPowder}), `;
          }
          else {
             const milkOrKefirWeightInGrams_ = 200;
@@ -496,7 +503,7 @@ export class MealPlanner {
             this._addMagnesiumIntakeWeight(this._cocoaPowder, cocoaPowderWeightInGrams_);
             fruitMeal2OutputPart1_ =
                `${this._milk} or ${this._kefir} (${milkOrKefirWeightInGrams_}g), ` +
-               `${this._cocoaPowder} (${cocoaPowderWeightInGrams_}g)`;
+               `${this._cocoaPowder} (${cocoaPowderWeightInGrams_}g), `;
          }
          const magnesiumCumulativeActualWithMagnesiumGlycinateIntakeWeightInMicroGrams_ =
             this._magnesiumCumulativeActualIntakeWeightInMicroGrams + this._magnesiumGlycinate.magnesiumContentInPartsPerMillion;
@@ -520,12 +527,13 @@ export class MealPlanner {
             "Tea Meal: " +
             `${this._greenTeaLeaves} (${greenTeaLeavesWeightInGrams_}g), ` +
             `${this._water}, ` +
-            `${teaMealOutputPart1_}`
+            teaMealOutputPart1_
          );
          console.info(
             "Fruit Meal 2: " +
             `${pickedFruitPulp_.ingredient} (${pickedFruitPulp_.ingredientWeightInGrams}g), ` +
-            `${fruitMeal2OutputPart1_}`
+            fruitMeal2OutputPart1_ +
+            `${this._salt} (optional)`
          );
       }
 
