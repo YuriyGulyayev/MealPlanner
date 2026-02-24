@@ -100,7 +100,7 @@
       // "customConditions": ,
 
       // // "nodenext" supports features introduced after "node20", while between those nothing like "node24" exists.
-      // // Deno alows only a limited number of possible values. Assuming it will provide a good one by default.
+      // // Deno allows only a limited number of possible values. Assuming it will provide a good one by default.
       // "module": "nodenext",
 
       // "moduleResolution": ,
