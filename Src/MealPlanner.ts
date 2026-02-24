@@ -87,7 +87,7 @@ export class MealPlanner {
    /** Magnesium content is for dry leaves. */
    private readonly _greenTeaLeaves = new Ingredient("Green Tea Leaves", IngredientFlags.None, 2000);
 
-   /** Magnesium content is for dry ground coffee beans. */
+   /** Magnesium content is for dry coffee beans. */
    private readonly _coffee = new Ingredient("Coffee", IngredientFlags.None, 3000);
 
    private readonly _cocoaPowder = new Ingredient("Cocoa Powder", IngredientFlags.None, 4990);
