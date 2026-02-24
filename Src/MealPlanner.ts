@@ -92,7 +92,7 @@ export class MealPlanner {
 
    private readonly _cocoaPowder = new Ingredient("Cocoa Powder", IngredientFlags.None, 4990);
 
-   /** Issue. Magnesium content is currently configured as zero, but some salts do contain some of it.  */
+   /** Issue. Magnesium content is currently configured as zero, but some salts do contain some of it. */
    private readonly _salt = new Ingredient("Salt", IngredientFlags.None, 0);
 
    private readonly _water = new Ingredient("Water", IngredientFlags.IsLiquid, 0);
