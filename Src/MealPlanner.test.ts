@@ -1,5 +1,5 @@
 // import {assertEquals} from "@std/assert";
-import * as Helpers from "./Helpers.ts";
+import {Helpers} from "./Helpers.ts";
 import {MealPlanner} from "./MealPlanner.ts";
 
 Deno.test(
@@ -7,5 +7,6 @@ Deno.test(
       const mealPlanner_ = new MealPlanner(Helpers.hackParseLocalDate("2019-12-31"));
       mealPlanner_.execute(30_000);
       mealPlanner_.execute(10);
+      mealPlanner_.execute(0);
    }
 );
