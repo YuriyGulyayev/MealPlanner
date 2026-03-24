@@ -1,3 +1,4 @@
+/** todo-2 Eliminate static classes. It's bad practice. */
 export class Helpers {
    /** Issue. This is an ugly hack. */
    public static hackParseLocalDate(localDateAsString_: string) {
