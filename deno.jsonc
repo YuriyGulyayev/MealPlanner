@@ -108,6 +108,7 @@
       // "noResolve": ,
 
       // Comment-202511232 applies.
+      // todo-2 In TypeScript 6+, this is `true` by default.
       "noUncheckedSideEffectImports": true,
 
       // "paths": ,
