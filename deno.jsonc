@@ -1,5 +1,6 @@
 {
    "lock": {
+      // Comment-202604062 in the global Scripts project applies.
       "frozen": true,
    },
    // "exclude": [],
