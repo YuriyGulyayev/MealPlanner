@@ -3,7 +3,7 @@
 main()
 {
    set -e
-   exec "${HOME}/My-Applications/Myself/Scripts/DenoLaunchers/DenoLint.bash"
+   exec "${HOME}/My-Applications/Myself/Scripts/Deno/Launchers/DenoLint.bash"
 }
 
 main
