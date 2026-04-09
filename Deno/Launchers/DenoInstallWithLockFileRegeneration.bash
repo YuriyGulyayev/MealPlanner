@@ -3,7 +3,7 @@
 main()
 {
    set -e
-   exec "${HOME}/My-Applications/Myself/Scripts/Deno/Launchers/DenoReinstall.bash"
+   exec "${HOME}/My-Applications/Myself/Scripts/Deno/Launchers/DenoInstallWithLockFileRegeneration.bash"
 }
 
 main
