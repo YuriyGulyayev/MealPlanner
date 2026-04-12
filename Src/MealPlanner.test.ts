@@ -1,5 +1,5 @@
 // import {assertEquals} from "@std/assert";
-import {Helpers} from "./Helpers.ts";
+import * as Helpers from "./Helpers.ts";
 import {MealPlanner} from "./MealPlanner.ts";
 
 Deno.test(
