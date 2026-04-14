@@ -269,6 +269,6 @@
 
    // "permissions": {},
    // "tasks": {
-   //    "start": "deno run Src/Main.ts",
+   //    "start": "deno run --allow-scripts --no-prompt -- Src/Main.ts",
    // },
 }
