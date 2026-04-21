@@ -99,12 +99,12 @@ export class GrainRotator implements IngredientRotator {
          if( slotCounter_ - grainLastPickSlotNumber_ > grainNumberOfSlotsBetweenPicksMinLimit_ &&
 
              // Comment-202602011 relates and/or applies.
-             (pickedGrainState_ == null || grainState_.picksInvertedPrioritySum < pickedGrainState_.picksInvertedPrioritySum)
+             (pickedGrainState_ === null || grainState_.picksInvertedPrioritySum < pickedGrainState_.picksInvertedPrioritySum)
          ) {
             pickedGrainState_ = grainState_;
          }
       }
-      if(pickedGrainState_ == null) {
+      if(pickedGrainState_ === null) {
          throw new Error(`GrainRotator: No eligible grains at slot ${slotCounter_}.`);
       }
       pickedGrainState_.picksInvertedPrioritySum += pickedGrainState_.invertedPriority;
