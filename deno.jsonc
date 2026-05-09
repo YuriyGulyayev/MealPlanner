@@ -164,10 +164,10 @@
       // In Deno, this is `true` by default.
       // [/Comment-202511065]
       // See also: "checkJs".
-      "allowJs": true,
+      "allowJs": false,
 
-      // See also: "allowJs".
-      "checkJs": true,
+      // // See also: "allowJs".
+      // "checkJs": true,
 
       // "maxNodeModuleJsDepth": ,
 
